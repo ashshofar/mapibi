@@ -263,6 +263,13 @@ class TitleController extends Controller
 		$data->value = '0';
 		$data->save();
 
+		$data = new Data();
+		$data->title_id = $title->id;
+		$data->hckey = 'id-ku';
+		$data->wilayah = 'Kalimantan Utara';
+		$data->value = '0';
+		$data->save();
+
 		return redirect()->route('admin.title.index')->with(['success' => 'Chart succesfully created!']);
 	}
 

@@ -36,10 +36,10 @@ class DataController extends Controller
 			 ->displayMode('regions')
 			 ->resolution('provinces');
 
-        return view('backend.data.index', compact('lava'));
+        //return view('backend.data.index', compact('lava'));
 
 
-		//return view('backend.data.index', ['datas' => $datas]);
+		return view('backend.data.index', ['lava' => $lava, 'datas' => $datas]);
 	}
 	
 
