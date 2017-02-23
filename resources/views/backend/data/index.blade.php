@@ -21,6 +21,7 @@
 		    </div>
 		</div>
 	</div>
+	
 
 	<div class="row">
 		<div class="col-md-12">
@@ -29,34 +30,8 @@
 		       		List
 		       	</div>
 		        <div class="card-body">
-		        	<table class="datatable table table-striped primary" cellspacing="0" width="100%">
-					    <thead>
-					        <tr>
-					            <th>Provinsi</th>
-					            <th>Value</th>
-					            <th>Action</th>
-					        </tr>
-					    </thead>
-					    <tbody>
-					    @if(count($datas) == 0)
-					    	<tr>
-					    		<td colspan="5"><center>No Chart</center></td>
-					    	</tr>
-						@else
-							@foreach($datas as $data)
-								<tr>
-									<td>{{ $data->wilayah }}</td>
-									<td>{{ $data->value }}</td>
-									<td>
-										<a href="{{ route('admin.data.edit', ['data_id' => $data->id]) }}" class="btn btn-xs btn-info">
-											Edit Value
-										</a>
-									</td>
-								</tr>
-							@endforeach
-						@endif
-					    </tbody>
-					</table>
+		        	<div id="pop-div" style="width:800px;border:1px solid black"></div>
+					<?= $lava->render('GeoChart', 'Popularity', 'pop-div') ?>
 				</div>
 		    </div>
 		</div>

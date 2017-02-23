@@ -34,13 +34,6 @@ class TitleController extends Controller
 
 		$data = new Data();
 		$data->title_id = $title->id;
-		$data->hckey = 'id-3700';
-		$data->wilayah = '-';
-		$data->value = '0';
-		$data->save();
-
-		$data = new Data();
-		$data->title_id = $title->id;
 		$data->hckey = 'id-ac';
 		$data->wilayah = 'Aceh';
 		$data->value = '0';
@@ -118,7 +111,7 @@ class TitleController extends Controller
 
 		$data = new Data();
 		$data->title_id = $title->id;
-		$data->hckey = 'id-se';
+		$data->hckey = 'id-sn';
 		$data->wilayah = 'Sulawesi Selatan';
 		$data->value = '0';
 		$data->save();
@@ -132,7 +125,7 @@ class TitleController extends Controller
 
 		$data = new Data();
 		$data->title_id = $title->id;
-		$data->hckey = 'id-ib';
+		$data->hckey = 'id-pb';
 		$data->wilayah = 'Papua Barat';
 		$data->value = '0';
 		$data->save();
@@ -153,14 +146,14 @@ class TitleController extends Controller
 
 		$data = new Data();
 		$data->title_id = $title->id;
-		$data->hckey = 'id-sw';
+		$data->hckey = 'id-sa';
 		$data->wilayah = 'Sulawesi Utara';
 		$data->value = '0';
 		$data->save();
 
 		$data = new Data();
 		$data->title_id = $title->id;
-		$data->hckey = 'id-la';
+		$data->hckey = 'id-mu';
 		$data->wilayah = 'Maluku Utara';
 		$data->value = '0';
 		$data->save();
@@ -209,14 +202,14 @@ class TitleController extends Controller
 
 		$data = new Data();
 		$data->title_id = $title->id;
-		$data->hckey = 'id-jr';
+		$data->hckey = 'id-jb';
 		$data->wilayah = 'Jawa Barat';
 		$data->value = '0';
 		$data->save();
 
 		$data = new Data();
 		$data->title_id = $title->id;
-		$data->hckey = 'id-1024';
+		$data->hckey = 'id-la';
 		$data->wilayah = 'Lampung';
 		$data->value = '0';
 		$data->save();
@@ -224,7 +217,7 @@ class TitleController extends Controller
 		$data = new Data();
 		$data->title_id = $title->id;
 		$data->hckey = 'id-jk';
-		$data->wilayah = 'DKI Jakarta';
+		$data->wilayah = 'Jakarta';
 		$data->value = '0';
 		$data->save();
 
@@ -251,14 +244,14 @@ class TitleController extends Controller
 
 		$data = new Data();
 		$data->title_id = $title->id;
-		$data->hckey = 'id-sl';
+		$data->hckey = 'id-ss';
 		$data->wilayah = 'Sumatera Selatan';
 		$data->value = '0';
 		$data->save();
 
 		$data = new Data();
 		$data->title_id = $title->id;
-		$data->hckey = 'id-sl';
+		$data->hckey = 'id-sr';
 		$data->wilayah = 'Sulawei Barat';
 		$data->value = '0';
 		$data->save();
