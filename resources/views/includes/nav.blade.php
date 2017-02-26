@@ -28,7 +28,7 @@
             </div>
             <ul class="action">
               <li>
-                <a href="#">
+                <a href="{{ route('admin.logout') }}">
                   Logout
                 </a>
               </li>

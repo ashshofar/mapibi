@@ -11,13 +11,35 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [
+	'uses' => 'FrontendController@getIndex',
+	'as' => 'index'
+]);
+
+Route::get('/data/{title_id}', [
+		'uses' => 'FrontendController@getData',
+		'as' => 'frontend.data'
+	]);
+
+Route::get('/admin/login', [
+	'uses' => 'AdminController@getLogin',
+	'as' => 'admin.login'
+]);
+
+Route::post('/admin/login/post', [
+	'uses' => 'AdminController@postLogin',
+	'as' => 'admin.login.post'
+]);
 
 Route::group([
 	'prefix' => '/admin'
 ], function(){
+
+	Route::get('/logout', [
+		'uses' => 'AdminController@getLogout',
+		'as' => 'admin.logout'
+	]);
+
 	Route::get('/title',[
 		'uses' => 'TitleController@getIndex',
 		'as' => 'admin.title.index'
