@@ -1,4 +1,4 @@
-@extends('layouts.frontend-master')
+@extends('layouts.admin-master')
 
 @section('content')
 	
@@ -11,12 +11,7 @@
 		<div class="col-md-12">
 		    <div class="card">
 		        <div class="card-header">
-					<h1> {{ $title->title }} </h1>
-		       	</div>
-		       	<div class="card-body">
-		       		<a href="{{ route('index') }}">
-		        		<button class="btn btn-primary">Back</button>
-		        	</a>
+					<h1> Data Bidan </h1>
 		       	</div>
 		    </div>
 		</div>
@@ -27,7 +22,7 @@
 		<div class="col-md-12">
 		    <div class="card">
 		        <div class="card-header">
-		       		MapChart
+		       		Map Chart
 		       	</div>
 		        <div class="card-body">
 		        	<div id="pop-div" style="width:1400"></div>
@@ -48,20 +43,25 @@
 					    <thead>
 					        <tr>
 					            <th>Provinsi</th>
-					            <th>Value</th>
+					            <th>Penduduk/Provinsi</th>
+					            <th>Bidan/Provinsi</th>
+					            <th>Anggota IBI/Provinsi</th>
+								<th>Sekolah Bidan/Provinsi</th>
 					        </tr>
 					    </thead>
 					    <tbody>
 					    @if(count($datas) == 0)
 					    	<tr>
-					    		<td colspan="5"><center>No Chart</center></td>
+					    		<td colspan="5"><center>No Data</center></td>
 					    	</tr>
 						@else
 							@foreach($datas as $data)
 								<tr>
 									<td>{{ $data->wilayah }}</td>
-									<td>{{ $data->value }}</td>
-									
+									<td>{{ $data->penduduk }}</td>
+									<td>{{ $data->bidan }}</td>
+									<td>{{ $data->anggota }}</td>
+									<td>{{ $data->sekolah }}</td>
 								</tr>
 							@endforeach
 						@endif

@@ -44,8 +44,9 @@ class FrontendController extends Controller
 
         //return view('backend.data.index', compact('lava'));
 
+		$title = Title::find($title_id);
 
-		return view('frontend.data', ['lava' => $lava, 'datas' => $datas]);
+		return view('frontend.data', ['lava' => $lava, 'datas' => $datas, 'title' => $title]);
 	}
 }
 ?>

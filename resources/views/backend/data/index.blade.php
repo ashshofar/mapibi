@@ -11,7 +11,7 @@
 		<div class="col-md-12">
 		    <div class="card">
 		        <div class="card-header">
-					<h1>Data Chart</h1>
+					<h1> {{ $title->title }} </h1>
 		       	</div>
 		       	<div class="card-body">
 		       		<a href="{{ route('admin.title.index') }}">
@@ -27,7 +27,7 @@
 		<div class="col-md-12">
 		    <div class="card">
 		        <div class="card-header">
-		       		List
+		       		Map Chart
 		       	</div>
 		        <div class="card-body">
 		        	<div id="pop-div" style="width:1400"></div>

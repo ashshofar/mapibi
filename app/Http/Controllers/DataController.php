@@ -38,8 +38,9 @@ class DataController extends Controller
 
         //return view('backend.data.index', compact('lava'));
 
+		$title = Title::find($title_id);
 
-		return view('backend.data.index', ['lava' => $lava, 'datas' => $datas]);
+		return view('backend.data.index', ['lava' => $lava, 'datas' => $datas, 'title' => $title]);
 	}
 	
 

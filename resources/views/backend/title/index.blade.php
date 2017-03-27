@@ -50,10 +50,7 @@
 									<td>{{ $title->title }}</td>
 									<td>{{ $title->description }}</td>
 									<td>
-										<a href="{{ route('admin.data.index', ['uevent_id' => $title->id]) }}" class="btn btn-xs btn-info">
-											Chart Data
-										</a>
-										<a href="" class="btn btn-xs btn-primary">
+										<a href="{{ route('admin.data.index', ['uevent_id' => $title->id]) }}" class="btn btn-xs btn-primary">
 											View Chart
 										</a>
 									</td>

@@ -86,4 +86,19 @@ Route::group([
 		'as' => 'admin.data.post.edit'
 	]);
 
+	Route::get('/bidanprov',[
+		'uses' => 'BidanprovController@getIndex',
+		'as' => 'admin.bidanprov.index'
+	]);
+
+	Route::get('/bidanprov/edit{bidanprov_id}',[
+		'uses' => 'BidanprovController@getUpdate',
+		'as' => 'admin.bidanprov.edit'
+	]);
+
+	Route::get('/bidanprov/edit/update',[
+		'uses' => 'BidanprovController@postUpdate',
+		'as' => 'admin.bidanprov.post.edit'
+	]);
+
 });
